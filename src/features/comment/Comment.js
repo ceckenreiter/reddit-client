@@ -13,6 +13,9 @@ export default function Comment () {
     }
 
     return (
-        <p>Comment</p>
+        <div class='comment'>
+            <p>Singluar Comment</p>
+        </div>
+
     )
 }

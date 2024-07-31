@@ -4,7 +4,7 @@ import ROUTES from "./Routes";
 
 export default function AppLayout() {
     return (
-        <div>
+        <div id='app-layout'>
             <nav>
                 <NavLink to={ROUTES.home()}>HOME</NavLink>
                 <NavLink to={ROUTES.myProfile()}>My Profile</NavLink>

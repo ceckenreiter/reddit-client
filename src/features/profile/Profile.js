@@ -16,7 +16,7 @@ export default function Profile () {
     }
 
     return (
-        <div>
+        <div id='profile'>
             <p>Profile</p>
         </div>
     )

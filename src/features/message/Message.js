@@ -1,6 +1,9 @@
 import React from "react";
+import Comments from "../comments/Comments";
 
 export default function Message () {
+
+    
 
     const API = {
         author: '',
@@ -20,6 +23,10 @@ export default function Message () {
 
 
     return (
-        <p>Message</p>
+        <div class='message'>
+            <p>message</p>
+            <Comments />
+        
+        </div>
     )
 }

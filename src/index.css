@@ -5,9 +5,62 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+#root {
+  border: 2px solid yellow; 
+  padding: 2rem; 
+}
+
+
+#app{
+  border: 2px solid blue; 
+  padding: 1rem; 
+}
+
+
+#app-layout {
+  border: 2px solid yellow; 
+  display: flex; 
+}
+
+nav {
+  padding: 1rem; 
+  border: 2px solid black; 
+  display: flex; 
+  flex-direction: column; 
+}
+nav a{ 
+    border: 2px solid green; 
+}
+
+#posts{
+  padding: 2rem;
+  border: 2px solid orange; 
+  display: flex; 
+  flex-direction: column; 
+  
+}
+#posts a {
+  border: 2px solid red; 
+  padding: 1rem;
+  margin: 1rem;
+  color: black
+}
+
+#profile{ 
+  border: 2px solid green; 
+}
+
+#complaint-form {
+  border: 2px solid yellow; 
+}
+
+

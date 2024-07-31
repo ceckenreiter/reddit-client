@@ -30,7 +30,9 @@ export default function Link () {
 
 
     return (
-        <p>Link</p>
+        <div class='link'>
+            <p>link</p>
+        </div>
     )
 
 }

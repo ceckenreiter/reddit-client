@@ -1,9 +1,13 @@
 import React from "react";
+import Comment from "../comment/Comment";
+
 
 export default function Comments () {
 
     return (
-        <p>Comments</p>
+        <div class='comments'>
+            <Comment />
+        </div>
     )
 
 } 

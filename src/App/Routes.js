@@ -2,8 +2,10 @@ const ROUTES = {
     complaintForm: () => '/report',
     myProfile: () => '/me',
     postsRoute: () => '/posts',
-    specificPost: (id) => `/posts/${id}`,
+    link: (id) => `/posts/link/${id}`,
+    message:(id) => `/posts/message/${id}`,
     home: ()=> '/',
 }
+
 
 export default ROUTES; 
