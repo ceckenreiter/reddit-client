@@ -13,3 +13,4 @@ export const commentSlice = createSlice({
 })
 
 export default commentSlice.reducer
+export const commentSelector = state => state.comments.comment

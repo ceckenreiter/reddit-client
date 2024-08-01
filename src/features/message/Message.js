@@ -1,8 +1,15 @@
 import React from "react";
 import Comments from "../comments/Comments";
+import { useSelector } from "react-redux";
+import { postsSelector } from "../posts/postsSlice";
+import { useParams } from "react-router-dom";
 
 export default function Message () {
-
+    const posts = useSelector(postsSelector)
+    const messageParams = useParams()
+    const ID = Object.values(messageParams)
+    const messageObject = posts.find(message => message.id===`${ID}`)
+    
     
 
     const API = {
@@ -24,8 +31,8 @@ export default function Message () {
 
     return (
         <div class='message'>
-            <p>message</p>
-            <Comments />
+            <p>{messageObject.name}</p>
+            <Comments comments={messageObject.comments}/>
         
         </div>
     )

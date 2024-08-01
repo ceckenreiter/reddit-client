@@ -1,14 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 export const linkSlice = createSlice({
     name:'link', 
-    initialState:{
-      
-    }, 
+    initialState:  {
+
+    },
     reducers: {
 
     }
 })
+
+
+
 
 export default linkSlice.reducer

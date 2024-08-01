@@ -6,7 +6,7 @@ import linkReducer from '../features/link/LinkSlice'
 import messageReducer from '../features/message/messageSlice'
 import profileReducer from '../features/profile/profileSlice'
 
-export default configureStore({
+export const store =  configureStore({
     reducer: {
         comments: commentsReducer, 
         comment: commentReducer, 
@@ -17,3 +17,4 @@ export default configureStore({
 
     }
 })
+

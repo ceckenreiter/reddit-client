@@ -6,6 +6,9 @@ import Message from '../features/message/Message';
 import Profile from '../features/profile/Profile';
 import Link from '../features/link/Link';
 import ClientView from '../Components/ClientView';
+import Comment from '../features/comment/Comment';
+
+
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
     <>
@@ -13,8 +16,9 @@ function App() {
       <Route path='/' element={<ClientView />}/>
       <Route path='me' element={<Profile />} />
       <Route path='report' element= {<ComplaintForm/>}/>
-      <Route path='posts/link/:id' element={<Link />} />
-      <Route path='posts/message/:id' element={<Message />} />
+      <Route path='posts/:type/:id' element={<Link />} />
+      <Route path='posts/:type/:id' element={<Message />} />
+      <Route path='/posts/:type/:id/:commentid' element={<Comment />} />
     </Route>
     
     
@@ -23,7 +27,7 @@ function App() {
 
   return (
     <div id='app'>
-    <RouterProvider router = { router } />
+    <RouterProvider router = { router }/>
     </div>
   );
 }

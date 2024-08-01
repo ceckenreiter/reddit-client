@@ -1,7 +1,16 @@
 import React from "react";
+import Comments from "../comments/Comments";
+import { useSelector } from "react-redux";
+import { postsSelector } from "../posts/postsSlice";
+import { useParams } from "react-router-dom";
 
 export default function Link () {
-
+    const posts = useSelector(postsSelector)
+    const linkObjects = useParams()
+    const linkParamArray = Object.values(linkObjects)
+    const linkObject = posts.find((post) => post.id===`${linkParamArray[1]}`)
+    
+    
     const API = {
         author: '', 
         domain: 'domain of link',
@@ -31,7 +40,9 @@ export default function Link () {
 
     return (
         <div class='link'>
-            <p>link</p>
+            <p>{linkObject.name}</p>
+            <Comments comments={linkObject.comments}/>
+
         </div>
     )
 

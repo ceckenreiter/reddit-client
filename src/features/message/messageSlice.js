@@ -11,3 +11,4 @@ export const messageSlice = createSlice({
 })
 
 export default messageSlice.reducer
+export const messageSelector = state => state.posts.message

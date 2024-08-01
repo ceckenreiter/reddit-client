@@ -1,16 +1,18 @@
 import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
-import ROUTES from "./Routes";
 
 export default function AppLayout() {
     return (
         <div id='app-layout'>
             <nav>
-                <NavLink to={ROUTES.home()}>HOME</NavLink>
-                <NavLink to={ROUTES.myProfile()}>My Profile</NavLink>
-                <NavLink to={ROUTES.complaintForm()}>Report Bug</NavLink>
+                <NavLink to={'/'}>HOME</NavLink>
+                <NavLink to={'/me'}>My Profile</NavLink>
+                <NavLink to={'/report'}>Report Bug</NavLink>
             </nav>
             <Outlet />
         </div>
     )
 }
+
+
+

@@ -1,7 +1,17 @@
-import React, {useState} from "react";
+import React from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { postsSelector } from "../posts/postsSlice";
 
 
-export default function Comment () {
+export default function Comment (prop) {
+    const posts = useSelector(postsSelector)
+    const postParams = useParams()
+    const postID = Object.values(postParams)
+    const postObject = posts.find(object => object.id===`${postID}`)
+    const commentsArray = postObject.comments
+
+
     const API = {
         author: '', 
         body: '', 
@@ -14,7 +24,7 @@ export default function Comment () {
 
     return (
         <div class='comment'>
-            <p>Singluar Comment</p>
+            <p>{prop.body}</p>
         </div>
 
     )

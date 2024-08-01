@@ -1,8 +1,15 @@
 import React from "react";
 
 export default function SearchBar () {
-    console.log('search bar')
+    
+
+    const handleFocus = () => {
+        console.log('hi')
+        
+    }
+
+
     return(
-        <p>Search Bar</p>
+        <input id='search-bar' type='search' onFocus={handleFocus}></input>
     )
 }
