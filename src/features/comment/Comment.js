@@ -1,30 +1,30 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { postsSelector } from "../posts/postsSlice";
 
 
-export default function Comment (prop) {
+export default function Comment () {
     const posts = useSelector(postsSelector)
-    const postParams = useParams()
-    const postID = Object.values(postParams)
-    const postObject = posts.find(object => object.id===`${postID}`)
-    const commentsArray = postObject.comments
+    const postParamArray = Object.values(useParams())
+    const postObject = posts.find((post) => post.id===`${postParamArray[1]}`)
+    const allComments = postObject.comments
+    const thisComment = allComments.find((comment) => comment.id === `${postParamArray[2]}`)
 
-
-    const API = {
+    const example = {
         author: '', 
         body: '', 
         likes: ' true if profileOwner upvoted false if not', 
         ups: 'number of upvotes', 
         downs: 'number of down votes', 
-        
 
     }
 
     return (
         <div class='comment'>
-            <p>{prop.body}</p>
+            <p>{thisComment.author}</p>
+            <p>{thisComment.body}</p>
+            <p>{thisComment.time}</p>
         </div>
 
     )

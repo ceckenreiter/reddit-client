@@ -11,21 +11,21 @@ const allPosts = [
                 time: '18:00', 
                 type: 'message', 
                 body: 'here is a 1',
-                id: 'comment 1'
+                id: 'c1'
             },
             {
                 author: 'author',
                 time: '13:00', 
                 type: 'message', 
                 body: 'here is a 2',
-                id: 'comment 2'
+                id: 'c2'
             },
             {
                 author: 'author',
                 time: '10:00', 
                 type: 'message', 
                 body: 'here is a 4',
-                id: 'comment 3'
+                id: 'c3'
             },
         ]
 
@@ -45,21 +45,21 @@ const allPosts = [
                 time: '18:00', 
                 type: 'message', 
                 body: 'here is a 2',
-                id: 'comment 1'
+                id: 'c1'
             },
             {
                 author: 'author',
                 time: '13:00', 
                 type: 'message', 
                 body: 'here is a 4',
-                id: 'comment 2'
+                id: 'c2'
             },
             {
                 author: 'author',
                 time: '10:00', 
                 type: 'message', 
                 body: 'here is a 5',
-                id: 'comment 3'
+                id: 'c3'
             },
         ]
     }

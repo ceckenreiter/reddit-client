@@ -1,4 +1,3 @@
-import '../index.css'
 import { Route, createBrowserRouter, RouterProvider, createRoutesFromElements } from 'react-router-dom'
 import AppLayout from './AppLayout';
 import ComplaintForm from '../Components/ComplaintForm';

@@ -10,8 +10,7 @@ export default function Profile () {
         is_friend: '', 
         name: 'username of account in question', 
         over_18: 'boolean value', 
-        created: 'integer'
-        
+        created: 'integer' 
     }
 
     return (
