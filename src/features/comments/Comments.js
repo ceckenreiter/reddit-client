@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { postsSelector } from "../posts/postsSlice";
-import { NavLink } from "react-router-dom";
+import Comment from "../comment/Comment";
 
 
 export default function Comments () {
@@ -12,16 +12,15 @@ export default function Comments () {
     const postObject = posts.find(object => object.id===postParamArray[1])
     const commentsArray = postObject.comments
 
-
     if (commentsArray === undefined) {
         return (
-            <div>No Comments</div>
+            <div id='noComments'>No Comments</div>
         )
     } else {
     return (
-        <div class='comments'>
+        <div id='comments'>
             {commentsArray.map((comment) => (
-               <NavLink key={comment.id} to={`/posts/${postParamArray[0]}/${postParamArray[1]}/${comment.id}`}>{comment.body}</NavLink>
+               <Comment key={comment.name} id={comment.id}/>
             ))}
         </div>
     )

@@ -67,3 +67,19 @@ nav a{
 #search-bar {
   background-color: blue;
 }
+
+#comments, #noComments {
+  border: 2px solid red; 
+  margin-left: 2rem;
+  
+}
+
+#comment {
+  border: 2px solid green; 
+  margin: 1rem;
+}
+
+#message, #link {
+  border: 2px solid pink; 
+  width: 100%; 
+}

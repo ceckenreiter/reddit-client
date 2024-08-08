@@ -4,12 +4,12 @@ import { useSelector } from "react-redux";
 import { postsSelector } from "../posts/postsSlice";
 
 
-export default function Comment () {
+export default function Comment (prop, id) {
     const posts = useSelector(postsSelector)
     const postParamArray = Object.values(useParams())
     const postObject = posts.find((post) => post.id===`${postParamArray[1]}`)
     const allComments = postObject.comments
-    const thisComment = allComments.find((comment) => comment.id === `${postParamArray[2]}`)
+    const thisComment = allComments.find((comment) => comment.id === `${prop.id}`)
 
     const example = {
         author: '', 
@@ -21,10 +21,10 @@ export default function Comment () {
     }
 
     return (
-        <div class='comment'>
+        <div id='comment'>
             <p>{thisComment.author}</p>
             <p>{thisComment.body}</p>
-            <p>{thisComment.time}</p>
+            <p>{thisComment.time}</p>  
         </div>
 
     )

@@ -30,9 +30,9 @@ export default function Message () {
 
 
     return (
-        <div class='message'>
+        <div id='message'>
             <p>{messageObject.name}</p>
-            <Comments comments={messageObject.comments}/>
+            <Comments />
         
         </div>
     )

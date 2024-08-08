@@ -39,9 +39,9 @@ export default function Link () {
 
 
     return (
-        <div class='link'>
+        <div id='link'>
             <p>{linkObject.name}</p>
-            <Comments comments={linkObject.comments}/>
+            <Comments />
 
         </div>
     )
