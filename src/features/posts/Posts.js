@@ -1,22 +1,42 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { UseDispatch, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getPosts } from "../api/api";
+import { viewPost } from "./postsSlice";
+import { store } from "../../App/Store";
 
-export default function Posts() {
 
+ export default function Posts() {
     const [children, setChildren] = useState([])
-    const waiting = async() => {
-        const response = await getPosts()
-        .catch(error => console.log(error))
-      
-        return response
-    }
+    const dispatch = useDispatch()
+    useEffect(() => {
+        const waiting = async() => {
+            const response = await getPosts()
+            .then((data) => {
+                setChildren(data)
+            })
+            .catch(error => console.log(error))
+            return 
+        }
+        if (children.length === 0) {
+            const response = waiting()
+        } 
+    }, [])
 
-    console.log(waiting())
-   
-   
+    const getPost = () => {
+        children.forEach((child) => {
+        dispatch(viewPost({
+            id: child.data.id, 
+            url: child.data.url, 
+            author: child.data.author,
+            title: child.data.title, 
+            comments: child.data.comments
+        })) 
+
+    })}
+    getPost()
+
     return (
         <div id='posts'>
             {children.map((post) => (

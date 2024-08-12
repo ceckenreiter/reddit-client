@@ -13,7 +13,10 @@ export const postsSlice = createSlice({
             return [
                 ...state, {
                     id: action.payload.id,
+                    url: action.payload.url,
+                    author: action.payload.author,
                     title: action.payload.title,
+                    comments: action.payload.comments,
                 }
             ]
         },

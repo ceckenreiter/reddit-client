@@ -7,10 +7,10 @@ import Comment from "../comment/Comment";
 
 export default function Comments () {
     const posts = useSelector(postsSelector)
-    const postParams = useParams()
-    const postParamArray = Object.values(postParams)
-    const postObject = posts.find(object => object.id===postParamArray[1])
-    const commentsArray = postObject.comments
+    const postParamArray = Object.values(useParams())
+    const postObject = posts.find(object => object.id===postParamArray[0])
+    console.log(postObject)
+    const commentsArray = []
 
     if (commentsArray === undefined) {
         return (

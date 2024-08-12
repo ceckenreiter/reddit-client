@@ -13,7 +13,6 @@ export const store =  configureStore({
         posts: postsReducer, 
         link: linkReducer, 
         message: messageReducer,
-        profile: profileReducer, 
 
     }
 })

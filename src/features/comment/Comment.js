@@ -19,7 +19,7 @@ export default function Comment (prop, id) {
         downs: 'number of down votes', 
 
     }
-
+ 
     return (
         <div id='comment'>
             <p>{thisComment.author}</p>

@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react"
+import { viewPost } from "../posts/postsSlice"
+
 
 export const getPosts = () => {
     const get = async() => {
+
         var authParams = {
             headers: {
                 accept: 'application.json'
@@ -9,14 +11,11 @@ export const getPosts = () => {
          }
         
         const result = await fetch('https://www.reddit.com/r/reddit.com/.json', authParams)
-        .then((data) => data.json())
-        .then((response) => {
-            console.log(response)
-            return response.data
-        })
+        const json = await result.json()
         .catch(error => console.log(error))
-       
-        return result
+        console.log(json)
+
+        return json.data.children
     }
     const blank = get()    
     return blank
